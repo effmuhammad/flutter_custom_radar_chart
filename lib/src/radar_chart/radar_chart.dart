@@ -81,7 +81,7 @@ class RadarChart extends StatefulWidget {
   /// Defines the color of the chart labels
   ///
   /// Defaults to [Colors.black]
-  final Color labelColor;
+  final List<Color>? labelColor;
 
   /// Defines the maximum width of the chart
   ///
@@ -166,7 +166,7 @@ class RadarChart extends StatefulWidget {
       this.size = Size.infinite,
       this.fillColor = Colors.black26,
       this.strokeColor = Colors.black87,
-      this.labelColor = Colors.black,
+      this.labelColor,
       this.maxWidth = 200,
       this.maxHeight = 200,
       this.textScaleFactor = 0.04,

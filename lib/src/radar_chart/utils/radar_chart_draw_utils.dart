@@ -15,12 +15,14 @@ class RadarChartDrawUtils {
       double textSize,
       double labelWidth,
       int maxLinesForLabels,
-      Color labelColor) {
+      List<Color>? labelColor) {
     var textPainter = TextPainter(textDirection: TextDirection.ltr);
     for (var i = 0; i < labelPoints.length; i++) {
       textPainter.text = TextSpan(
           text: labels[i],
-          style: TextStyle(color: labelColor, fontSize: textSize));
+          style: TextStyle(
+              color: labelColor == null ? Colors.black87 : labelColor[i],
+              fontSize: textSize));
       textPainter.maxLines = maxLinesForLabels;
       textPainter.textAlign = TextAlign.center;
 
